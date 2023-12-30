@@ -1,0 +1,180 @@
+.attempt-update-container {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    background-color: #1a1a1a;
+    position: relative; /* Add position relative here */
+}
+ 
+.attempt-update-table {
+    position: relative;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.attempt-update-table th, .attempt-update-table td {
+    min-width: 24px;
+    border: 2px solid #71f5fb;
+    padding: 8px;
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.attempt-update-table th {
+    position: sticky;
+    top: 0;
+    background-color: #1a1a1a;
+}
+
+.attempt-update-table th:nth-child(2) {
+    min-width: 123px;
+}
+
+.attempt-update-table th:nth-child(3), /* Squat 1 */
+.attempt-update-table th:nth-child(4), /* Squat 2 */
+.attempt-update-table th:nth-child(5), /* Squat 3 */
+.attempt-update-table th:nth-child(6), /* Bench 1 */
+.attempt-update-table th:nth-child(7), /* Bench 2 */
+.attempt-update-table th:nth-child(8), /* Bench 3 */
+.attempt-update-table th:nth-child(9), /* Deadlift 1 */
+.attempt-update-table th:nth-child(10), /* Deadlift 2 */
+.attempt-update-table th:nth-child(11) { /* Deadlift 3 */
+    min-width: 89px; /* Adjust this value as needed */
+}
+
+
+.attempt-update-table input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #71f5fb;
+    background-color: #2c2c2c;
+    color: white;
+    border-radius: 4px;
+    text-align: center; 
+}
+
+/* Hide HTML5 Up and Down arrows on number inputs in Chrome, Safari, Edge, Opera */
+.attempt-update-table input[type="number"]::-webkit-inner-spin-button,
+.attempt-update-table input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.attempt-update-table button {
+    padding: 5px 10px;
+    background-color: #71f5fb;
+    border: none;
+    color: #1a1a1a;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.attempt-update-table button:hover {
+    background-color: #65dbe6;
+}
+
+.attempt-cell {
+    position: relative;
+    cursor: pointer;
+}
+
+td {
+    position: relative; 
+    transition: background-color 0.3s; 
+}
+
+.hover-icons {
+    display: none;
+    position: absolute; /* Position it absolutely within the cell */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* Cover the entire cell */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+td:hover {
+    background-color: #71f5fb;
+}
+
+td:hover .hover-icons,
+td input:hover + .hover-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hover-icons img {
+    width: 20px;
+    height: auto;
+    filter: invert(100%);
+}
+
+/* Custom Checkbox Styles */
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.custom-checkbox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #2c2c2c;
+    border: 2px solid #71f5fb;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label {
+    background-color: #71f5fb;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg viewBox="0 0 16 16" fill="%232c2c2c" xmlns="http://www.w3.org/2000/svg"><path d="M13.207 4.793a1 1 0 00-1.414-1.414L6 9.586 4.207 7.793a1 1 0 10-1.414 1.414l2.5 2.5a1 1 0 001.414 0l6.5-6.5z"/></svg>'); /* Checkmark icon */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: #71f5fb;
+}
+
+.hide-icon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%); /* Centering the icon */
+    cursor: pointer;
+    z-index: 10;
+}
+
+.icon-background {
+    width: 20px;  /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    background-color: #2c2c2c;
+    border-radius: 50%;  /* Makes the div circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide-icon-container img {
+    width: 20px;  /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    filter: brightness(0) invert(1);
+}

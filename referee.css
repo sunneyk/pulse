@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  background-color: #1a1a1a; /* Set to your website's background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.button-container {
+  width: 80%; /* Responsive width based on device size */
+  max-width: 500px; /* Maximum width */
+}
+
+.decision-button {
+  background-color: #4CAF50; /* Green for thumbs up */
+  border: none;
+  color: white;
+  padding: 40px;
+  margin: 50px 0; /* Only vertical margin */
+  text-align: center;
+  display: block; /* Stack on top of each other */
+  font-size: 5vw; /* Responsive font size based on device width */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  transition: transform 0.1s, box-shadow 0.1s; /* Smooth effects */
+  cursor: pointer;
+  width: 100%; /* Make the button expand to the container width */
+}
+
+.decision-button img {
+  width: 50%; /* Responsive image size based on button width */
+  height: auto;
+}
+
+.decision-button.thumbs-down {
+  background-color: #f44336; /* Red for thumbs down */
+}
+
+/* Hover effect */
+.decision-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Active/click effect */
+.decision-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
